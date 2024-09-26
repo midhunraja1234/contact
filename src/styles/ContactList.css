@@ -18,7 +18,6 @@
     border-radius: 20px;
     transition: all 0.3s ease; /* Smooth transition for hover effects */
     box-shadow: 0 10px 20px rgba(61, 164, 216, 0.504); 
-
 }
 
 
@@ -61,12 +60,19 @@
 }
 
 .grid-container {
+    height: 90%;
+    /* background-color: red; */
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
     grid-template-rows: repeat(3, auto);  
     gap: 20px;
     max-width: 1200px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    /* overflow: hidden; */
+    overflow: scroll;
+    padding: 2%;
 }
 
 .grid-item {

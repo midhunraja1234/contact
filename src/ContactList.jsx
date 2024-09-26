@@ -16,8 +16,8 @@ function ContactList() {
 
     return (
         <div className='main-page'>
+                <h2 className='contacts'>My contacts</h2>
             <div className="border">
-                <h2 className='contacts'>My Contacts</h2>
                 <div className='grid-container'>
                     {
                         contact.map((item, index) => (
@@ -29,7 +29,7 @@ function ContactList() {
                     }
                 </div>
                 <button className='add-contact' onClick={() => navigate('/add')}>
-                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add contact
+                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add  new contact
                 </button>
             </div>
         </div>
