@@ -37,7 +37,7 @@ const Add = () => {
        <div className='flex-container'>
         <div className='add-container'>
                 <div className='add-heading'>
-                       <RxCross1 className='exit' onClick={()=>navigate('/')}/>
+                       <RxCross1 className='exit'onClick={()=>navigate('/')}/>
                     <p>Add New Contact</p>
                 </div>
                 <div className='fields'>
@@ -67,7 +67,7 @@ const Add = () => {
                         <label>Phone</label>
                         <input
                             type="text"
-                            className="phone"
+                            
                             placeholder='Enter phone number'
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
@@ -78,7 +78,7 @@ const Add = () => {
                         <label>Address</label>
                         <input
                             type="text"
-                            className="address"
+                            
                             placeholder='Enter address'
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
@@ -87,7 +87,7 @@ const Add = () => {
 
                     <div className='button'>
                         <button onClick={add}>Add Contact</button>
-                        <button onClick={() => { setName(''); setEmail(''); setPhone(''); setAddress(''); }}>Cancel</button>
+                        <button className="cancel" onClick={() => { setName(''); setEmail(''); setPhone(''); setAddress(''); }}>Cancel</button>
                     </div>
             </div>
       </div>

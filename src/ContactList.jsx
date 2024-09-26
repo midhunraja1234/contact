@@ -16,8 +16,8 @@ function ContactList() {
 
     return (
         <div className='main-page'>
-            <div className="border">
                 <h2 className='contacts'>My Contacts</h2>
+            <div className="border">
                 <div className='grid-container'>
                     {
                         contact.map((item, index) => (
