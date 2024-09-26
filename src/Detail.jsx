@@ -34,7 +34,6 @@ function Detail() {
                        Go Back to contacts
                     </div>
                 </div>
-
             </div>
         </div>
     );
