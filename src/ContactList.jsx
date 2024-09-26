@@ -16,7 +16,7 @@ function ContactList() {
 
     return (
         <div className='main-page'>
-                <h2 className='contacts'>My contacts</h2>
+                <h2 className='contacts'> my Contacts</h2>
             <div className="border">
                 <div className='grid-container'>
                     {
@@ -29,7 +29,7 @@ function ContactList() {
                     }
                 </div>
                 <button className='add-contact' onClick={() => navigate('/add')}>
-                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add my Contact
+                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add Contacsss
                 </button>
             </div>
         </div>
