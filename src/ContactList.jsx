@@ -29,7 +29,6 @@ function ContactList() {
                     }
                 </div>
                 <button className='add-contact' onClick={() => navigate('/add')}>
-                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add another contact
                     <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add my Contact
                 </button>
             </div>
