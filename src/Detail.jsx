@@ -1,19 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import './styles/detail.css';
 import { useNavigate } from "react-router-dom";
+import { ContactContext } from './Context/ContactContext.jsx';
 
-function Detail({contact,setContact,current,setCurrent}) {
+function Detail() {
 
+    const { current } = useContext(ContactContext);
     const navigate = useNavigate();
 
-return(
-    <div className="page2">
-        <div className="page2-container">
+    const contactDetails = current?.[0] || {};
 
-            <div className="container-1">
-                <div className="detail-name">{current[0].name}</div>
-                <div className="detail-email">{current[0].email}</div>
+    return (
+        <div className="page2">
+            <div className="page2-container">
+
+                <div className="container-1">
+                    <div className="detail-name">{contactDetails.name || "Name not available"}</div>
+                    <div className="detail-email">{contactDetails.email || "Email not available"}</div>
+                </div>
+
+                <div className="container-2">
+                    <div className="phone">
+                        <div className="phone-1">Phone</div>
+                        <div className="phone-2">{contactDetails.phone || "Phone not available"}</div>
+                    </div>
+
+                    <div className="address">
+                        <div className="address-1">Address</div>
+                        <div className="address-2">{contactDetails.address || "Address not available"}</div>
+                    </div>
+
+                    <div className="back-contact" onClick={() => navigate('/')}>
+                        Back to contacts
+                    </div>
+                </div>
+
             </div>
+<<<<<<< HEAD
 
             <div className="container-2">
                 <div className="phone">
@@ -29,9 +52,10 @@ return(
                     back to contacts
                 </div>
             </div>
+=======
+>>>>>>> 5e0143b2aa098d6670c60133ae0ef8765fbb0f83
         </div>
-    </div>
-)
-
+    );
 }
-export default Detail
+
+export default Detail;

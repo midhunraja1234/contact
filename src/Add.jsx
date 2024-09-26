@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RxCross1 } from "react-icons/rx";
 import './styles/Add.css'; 
+import { ContactContext } from './Context/ContactContext.jsx'
 
-const Add = ({ contact, setContact, current, setCurrent }) => {
+const Add = () => {
+    const { contact, setContact, current, setCurrent } = useContext(ContactContext);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -33,7 +35,7 @@ const Add = ({ contact, setContact, current, setCurrent }) => {
        <div className='flex-container'>
         <div className='add-container'>
                 <div className='add-heading'>
-                       <RxCross1 className='exit' onClick={()=>navigate('/')}/>
+                       <RxCross1 className='exit'onClick={()=>navigate('/')}/>
                     <p>Add New Contact</p>
                 </div>
                 <div className='fields'>
@@ -63,7 +65,7 @@ const Add = ({ contact, setContact, current, setCurrent }) => {
                         <label>Phone</label>
                         <input
                             type="text"
-                            className="phone"
+                            
                             placeholder='Enter phone number'
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
@@ -74,7 +76,7 @@ const Add = ({ contact, setContact, current, setCurrent }) => {
                         <label>Address</label>
                         <input
                             type="text"
-                            className="address"
+                            
                             placeholder='Enter address'
                             value={address}
                             onChange={(e) => setAddress(e.target.value)}
@@ -83,7 +85,7 @@ const Add = ({ contact, setContact, current, setCurrent }) => {
 
                     <div className='button'>
                         <button onClick={add}>Add Contact</button>
-                        <button onClick={() => { setName(''); setEmail(''); setPhone(''); setAddress(''); }}>Cancel</button>
+                        <button className="cancel" onClick={() => { setName(''); setEmail(''); setPhone(''); setAddress(''); }}>Cancel</button>
                     </div>
             </div>
       </div>

@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import './styles/ContactList.css';
 import { AiOutlinePlus } from "react-icons/ai";
+import { ContactContext } from './Context/ContactContext.jsx'
 
-function ContactList({ contact, setCurrent }) {
+function ContactList() {
+    const { contact, setContact, current, setCurrent } = useContext(ContactContext);
     const navigate = useNavigate();
 
     function handleChange(item) 
@@ -14,8 +16,8 @@ function ContactList({ contact, setCurrent }) {
 
     return (
         <div className='main-page'>
+                <h2 className='contacts'>My contacts</h2>
             <div className="border">
-                <h2 className='contacts'>My Contacts</h2>
                 <div className='grid-container'>
                     {
                         contact.map((item, index) => (
@@ -27,7 +29,7 @@ function ContactList({ contact, setCurrent }) {
                     }
                 </div>
                 <button className='add-contact' onClick={() => navigate('/add')}>
-                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add New contact
+                    <AiOutlinePlus className='add-icon' style={{ color: 'white' }} /> Add contact
                 </button>
             </div>
         </div>
