@@ -18,11 +18,9 @@ const Add = ({ contact, setContact, current, setCurrent }) => {
             phone: phone,
             address: address
         };
-        
         console.log("New Contact Added:", newContact);
         const newArr = [newContact, ...contact];
         setContact(newArr);
-
         setName('');
         setEmail('');
         setPhone('');

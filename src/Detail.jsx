@@ -25,13 +25,10 @@ return(
                     <div className="address-1">Address</div>
                      <div className="address-2">{current[0].address}</div>
                 </div>
-
                 <div className="back-contact" onClick={()=>navigate('/')}>
                     back to contacts
                 </div>
-                
             </div>
-
         </div>
     </div>
 )
