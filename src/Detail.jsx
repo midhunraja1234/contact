@@ -31,7 +31,7 @@ function Detail() {
                     </div>
 
                     <div className="back-contact" onClick={() => navigate('/')}>
-                        Back to contacts
+                       Go Back to contacts
                     </div>
                 </div>
 
