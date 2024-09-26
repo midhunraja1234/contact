@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { RxCross1 } from "react-icons/rx";
 import './styles/Add.css'; 
+import { ContactContext } from './Context/ContactContext.jsx'
 
-const Add = ({ contact, setContact, current, setCurrent }) => {
+const Add = () => {
+    const { contact, setContact, current, setCurrent } = useContext(ContactContext);
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
