@@ -36,6 +36,24 @@ function Detail() {
                 </div>
 
             </div>
+<<<<<<< HEAD
+
+            <div className="container-2">
+                <div className="phone">
+                    <div className="phone-1">Phone</div>
+                    <div className="phone-2">{current[0].phone}</div>
+                </div>
+                
+                <div className="address">
+                    <div className="address-1">Address</div>
+                     <div className="address-2">{current[0].address}</div>
+                </div>
+                <div className="back-contact" onClick={()=>navigate('/')}>
+                    back to contacts
+                </div>
+            </div>
+=======
+>>>>>>> 5e0143b2aa098d6670c60133ae0ef8765fbb0f83
         </div>
     );
 }
