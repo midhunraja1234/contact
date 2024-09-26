@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import './styles/ContactList.css';
 import { AiOutlinePlus } from "react-icons/ai";
+import { ContactContext } from './Context/ContactContext.jsx'
 
-function ContactList({ contact, setCurrent }) {
+function ContactList() {
+    const { contact, setContact, current, setCurrent } = useContext(ContactContext);
     const navigate = useNavigate();
 
     function handleChange(item) 
